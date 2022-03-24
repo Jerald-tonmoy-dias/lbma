@@ -2,4 +2,31 @@
   background: #034158;
   height: 100%;
   width: 100%;
+  color: #fff;
+}
+.gold-header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #fff;
+}
+.custom-col-4 {
+  width: 33.33%;
+  display: block;
+  color: #fff;
+}
+.gold-time-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.am,.pm {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  justify-content: space-around;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.w-30 {
+  width: 30%;
 }
