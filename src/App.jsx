@@ -83,8 +83,6 @@ function App() {
       })
   }
 
-
-
   // get back for todat json
   // https://prices.lbma.org.uk/json/today.json
 
