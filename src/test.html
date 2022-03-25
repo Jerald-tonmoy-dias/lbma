@@ -1,0 +1,2473 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <!--production-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#a59266" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/rzs5bsx.css" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://blacklabel.github.io/grouped_categories/grouped-categories.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js"
+      defer
+    ></script>
+    <title>LBMA Precious Metal Prices | LBMA</title>
+    <script>
+      dataLayer = [];
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MQ3HF2R");
+    </script>
+    <meta name="generator" content="SEOmatic" />
+    <meta
+      name="description"
+      content="International prices for gold, silver, platinum and palladium."
+    />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="robots" content="all" />
+    <meta content="en_GB" property="og:locale" />
+    <meta content="LBMA" property="og:site_name" />
+    <meta content="website" property="og:type" />
+    <meta
+      content="https://www.lbma.org.uk/prices-and-data/precious-metal-prices"
+      property="og:url"
+    />
+    <meta content="LBMA Precious Metal Prices" property="og:title" />
+    <meta
+      content="International prices for gold, silver, platinum and palladium."
+      property="og:description"
+    />
+    <link
+      href="https://www.lbma.org.uk/prices-and-data/precious-metal-prices"
+      rel="canonical"
+    />
+    <link href="https://www.lbma.org.uk" rel="home" />
+    <link
+      type="text/plain"
+      href="https://www.lbma.org.uk/humans.txt"
+      rel="author"
+    />
+  </head>
+  <body
+    class="prices antialiased h-full debug-screens"
+    data-theme-pri="turquoise"
+    data-theme-sec="blue"
+    data-barba="wrapper"
+  >
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MQ3HF2R"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <header
+      x-data="{ isOpen: false }"
+      id="header"
+      class="fixed z-20 w-full transition-all duration-200 transform bg-white header"
+      role="banner"
+      data-pri="turquoise"
+      data-sec="blue"
+    >
+      <div class="container shadow-md">
+        <div class="row" x-data="{ navOpen: false }">
+          <div class="flex justify-between">
+            <div id="header-logo" class="z-20 color-trans">
+              <a
+                aria-label="Home"
+                class="flex header__logo fnav:-mb-6"
+                href="https://www.lbma.org.uk/"
+              >
+                <svg
+                  class="icon-logo fill-current"
+                  viewBox="0 0 79 123"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path class="icon-logo-bg" d="M79 0H0v122.953h79V0z" />
+                  <path
+                    d="M54.837 56.024a40.27 40.27 0 00-6.751-22.386 23.096 23.096 0 01-.119 44.89 39.796 39.796 0 006.87-22.504zM16.112 96.172h1.895v13.858h6.04l-.237 1.54h-7.698V96.173zM29.847 97.712h1.659a2.369 2.369 0 011.776 2.487 4.264 4.264 0 01-.237 1.185c-.474.947-1.066 1.303-2.724 1.303h-2.724v-4.975h2.25zM25.82 111.57h4.027c2.25 0 2.724 0 3.553-.356a4.14 4.14 0 002.606-3.908 4.26 4.26 0 00-1.421-3.08 4.63 4.63 0 00-2.014-.829 3.55 3.55 0 002.725-3.434 3.672 3.672 0 00-2.606-3.435c-.83-.356-1.54-.356-4.62-.356h-2.25v15.398zm4.501-7.225h1.895a2.604 2.604 0 011.777 2.724c.034.447-.047.896-.237 1.303-.474 1.184-1.185 1.54-3.08 1.54h-3.08v-5.567h2.725zM39.445 96.172h2.605l2.843 10.068.592 2.724c.145-.88.343-1.75.592-2.606l2.843-10.186h2.724l1.421 15.398H51.17l-.947-11.252c0-1.066-.119-2.724-.119-2.724-.113.847-.312 1.68-.592 2.487l-3.316 11.489h-1.54l-3.08-10.897c-.236-1.184-.473-2.013-.71-3.08-.237-1.065-.118 2.014-.237 2.962L39.8 111.57h-1.777l1.422-15.397zM59.694 100.081l.829-2.25.71 2.368c.356 1.303 1.659 5.093 1.659 5.093h-4.857s1.54-4.974 1.659-5.211zm-.356-3.909l-5.093 15.398h1.895l1.422-4.738h5.803l1.422 4.738h2.131l-5.092-15.397h-2.488zM46.07 33.755l1.777 4.264A19.308 19.308 0 0022.164 52.89a19.306 19.306 0 0019.288 22.556 20.729 20.729 0 006.04-.947l-1.54 3.79-4.382 10.778-4.5-10.778-8.173 8.29V74.855l-10.66 4.5 4.383-10.659H11.012l8.291-8.172-10.778-4.501 10.778-4.382-8.29-8.173H22.62L18.237 32.69l10.66 4.5V25.584l8.172 8.172 4.501-10.66 4.5 10.66z"
+                    fill="#fff"
+                  />
+                </svg>
+              </a>
+            </div>
+            <nav
+              id="primarynav"
+              class="flex self-end mnav:hidden"
+              role="navigation"
+            >
+              <div class="flex flex-col-reverse">
+                <ul id="js-primarynav" class="flex justify-end">
+                  <li class="ml-4 js-primarynav__item has-sub">
+                    <span
+                      class="flex pb-4 font-bold whitespace-no-wrap cursor-default nav-node text-18"
+                      >Market Standards</span
+                    >
+                    <div
+                      class="absolute left-0 hidden w-full py-12 pt-16 bg-white border-t shadow nav-sub"
+                      style="top: 95px"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="flex">
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Overview</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/market-standards"
+                                      >Market Standards</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/market-standards/about-loco-london"
+                                      >About Loco London</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/market-standards/global-precious-metals-code"
+                                      >Global Precious Metals Code</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/publications/the-otc-guide"
+                                      >A Guide to the Loco London Precious
+                                      Metals Market</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/training-and-education"
+                                      >Training and Education</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Regulation</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/regulation/financial-regulation"
+                                      >Financial Regulation</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/regulation/due-diligence-regulation"
+                                      >Due Diligence Regulation</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/regulation/environmental-regulation"
+                                      >Environmental Regulation</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/market-standards/incident-review-process"
+                                      >Incident Review Process</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="p-6 pb-0 rounded-sm shadow-lg">
+                                <a
+                                  href="https://www.lbma.org.uk/publications/the-code"
+                                  class="flex flex-col h-full relative items-start group transform transition-transform duration-200 hover:-translate-y-1 bg-center bg-cover"
+                                >
+                                  <div
+                                    class="flex flex-col justify-between h-full w-full min-h-1"
+                                  >
+                                    <div class="">
+                                      <h3
+                                        class="text-22 font-medium leading-tight text-black mb-4 md:mb-6"
+                                      >
+                                        Global Precious Metals Code
+                                      </h3>
+                                      <div class="text-18 mb-6 text-black">
+                                        <p>
+                                          The standards and best practice
+                                          expected from market participants in
+                                          the global over-the-counter wholesale
+                                          precious metals market
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="mb-6 button">
+                                      <span
+                                        class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-black hover:bg-black-hover group-hover:bg-black-hover transition-all duration-200"
+                                      >
+                                        Find out more
+                                      </span>
+                                    </p>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ml-4 js-primarynav__item has-sub">
+                    <span
+                      class="flex pb-4 font-bold whitespace-no-wrap cursor-default nav-node text-18"
+                      >Membership</span
+                    >
+                    <div
+                      class="absolute left-0 hidden w-full py-12 pt-16 bg-white border-t shadow nav-sub"
+                      style="top: 95px"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="flex">
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Overview</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/membership/about-membership"
+                                      >About Membership</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/membership/membership-benefits"
+                                      >Membership Benefits</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/membership/how-to-join"
+                                      >How to Join</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/membership/current-membership"
+                                      >Current Members</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/membership/rules-for-members"
+                                      >Rules for Members</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/membership/lbma-subscriber"
+                                      >LBMA Subscriber</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/membership/faqs"
+                                      >Membership FAQs</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="p-6 pb-0 rounded-sm shadow-lg">
+                                <a
+                                  href="https://www.lbma.org.uk/membership/current-membership"
+                                  class="flex flex-col h-full relative items-start group transform transition-transform duration-200 hover:-translate-y-1 bg-center bg-cover"
+                                >
+                                  <div
+                                    class="flex flex-col justify-between h-full w-full min-h-1"
+                                  >
+                                    <div class="">
+                                      <h3
+                                        class="text-22 font-medium leading-tight text-black mb-4 md:mb-6"
+                                      >
+                                        Current Members
+                                      </h3>
+                                      <div class="text-18 mb-6 text-black">
+                                        <p>
+                                          Here you can find the names and
+                                          contact details of all our Members.
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="mb-6 button">
+                                      <span
+                                        class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-black hover:bg-black-hover group-hover:bg-black-hover transition-all duration-200"
+                                      >
+                                        Find out more
+                                      </span>
+                                    </p>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ml-4 js-primarynav__item has-sub">
+                    <span
+                      class="flex pb-4 font-bold whitespace-no-wrap cursor-default nav-node text-18"
+                      >Good Delivery</span
+                    >
+                    <div
+                      class="absolute left-0 hidden w-full py-12 pt-16 bg-white border-t shadow nav-sub"
+                      style="top: 95px"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="flex">
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Overview</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/about-good-delivery"
+                                      >About Good Delivery</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/good-delivery-rules-and-governance"
+                                      >Good Delivery Rules and Governance</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/reference-materials"
+                                      >Reference Materials</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/proactive-monitoring"
+                                      >Proactive Monitoring</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/proficiency-testing-scheme"
+                                      >Proficiency Testing Scheme</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/vault-operators-training"
+                                      >Vault Operators Training</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/gold-bar-security-feature"
+                                      >Gold Bar Security Feature</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/visual-guide"
+                                      >Visual Guide</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/non-destructive-testing-guidelines"
+                                      >Non-Destructive Testing Guidelines</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/faqs"
+                                      >Good Delivery FAQs</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Lists</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/gold-current-list"
+                                      >Good Delivery Current List</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/gold-former-list"
+                                      >Good Delivery Former List</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/good-delivery/how-to-apply-for-good-delivery-accreditation"
+                                      >How to apply for Good Delivery
+                                      accreditation</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ml-4 js-primarynav__item has-sub">
+                    <span
+                      class="flex pb-4 font-bold whitespace-no-wrap cursor-default nav-node text-18"
+                      >Responsible Sourcing</span
+                    >
+                    <div
+                      class="absolute left-0 hidden w-full py-12 pt-16 bg-white border-t shadow nav-sub"
+                      style="top: 95px"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="flex">
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Overview</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/responsible-sourcing"
+                                      >Responsible Sourcing</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/responsible-sourcing/auditors"
+                                      >Auditors</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/responsible-sourcing/guidance-documents"
+                                      >Guidance Documents</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/responsible-sourcing/refiners-toolkit"
+                                      >Refiners Toolkit</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Resources</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/articles/international-bullion-centres-recommendations"
+                                      >International Bullion Centre
+                                      Recommendations</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/videos/responsible-sourcing-introductory-training-module"
+                                      >Introductory Training Module</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/responsible-sourcing/responsible-sourcing-faqs"
+                                      >Responsible Sourcing FAQs</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="p-6 pb-0 rounded-sm shadow-lg">
+                                <a
+                                  href="https://portal.lbmahosting.org.uk/My-LBMA/My-Account/My-Subscriptions"
+                                  class="flex flex-col h-full relative items-start group transform transition-transform duration-200 hover:-translate-y-1 bg-center bg-cover"
+                                >
+                                  <div
+                                    class="flex flex-col justify-between h-full w-full min-h-1"
+                                  >
+                                    <div class="">
+                                      <h3
+                                        class="text-22 font-medium leading-tight text-black mb-4 md:mb-6"
+                                      >
+                                        Responsible Sourcing Newsletter
+                                      </h3>
+                                      <div class="text-18 mb-6 text-black">
+                                        <p>
+                                          Subscribe to receive the latest news
+                                          and wider developments in the market.
+                                          Sign up through the MyLBMA section of
+                                          our website.<br />
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="mb-6 button">
+                                      <span
+                                        class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-black hover:bg-black-hover group-hover:bg-black-hover transition-all duration-200"
+                                      >
+                                        Find out more
+                                      </span>
+                                    </p>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ml-4 js-primarynav__item has-sub">
+                    <span
+                      class="flex pb-4 font-bold whitespace-no-wrap cursor-default nav-node text-18"
+                      >Prices &amp; Data</span
+                    >
+                    <div
+                      class="absolute left-0 hidden w-full py-12 pt-16 bg-white border-t shadow nav-sub"
+                      style="top: 95px"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="flex">
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Overview</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/about-lbma-precious-metal-prices"
+                                      >About LBMA Precious Metal Prices</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/lbma-gold-price"
+                                      >LBMA Gold Price</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/lbma-silver-price"
+                                      >LBMA Silver Price</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/lbma-platinum-and-palladium-price"
+                                      >LBMA Platinum and Palladium Price</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/market-standards/clearing"
+                                      >Clearing</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/market-standards/vault-storage"
+                                      >Vault Storage</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Data</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/precious-metal-prices"
+                                      >LBMA Precious Metal Prices</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/clearing-data"
+                                      >Clearing Data</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/london-vault-holdings-data"
+                                      >London Vault Holdings data</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/lbma-trade-data"
+                                      >LBMA Trade Data</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/value-dates"
+                                      >Value Dates</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="p-6 pb-0 rounded-sm shadow-lg">
+                                <a
+                                  href="https://www.lbma.org.uk/publications/the-otc-guide"
+                                  class="flex flex-col h-full relative items-start group transform transition-transform duration-200 hover:-translate-y-1 bg-center bg-cover"
+                                >
+                                  <div
+                                    class="flex flex-col justify-between h-full w-full min-h-1"
+                                  >
+                                    <div class="">
+                                      <h3
+                                        class="text-22 font-medium leading-tight text-black mb-4 md:mb-6"
+                                      >
+                                        A Guide to the Loco London Precious
+                                        Metals Market
+                                      </h3>
+                                      <div class="text-18 mb-6 text-black">
+                                        <p>
+                                          A comprehensive overview of how the
+                                          Loco London Market works.
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="mb-6 button">
+                                      <span
+                                        class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-black hover:bg-black-hover group-hover:bg-black-hover transition-all duration-200"
+                                      >
+                                        Find out more
+                                      </span>
+                                    </p>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ml-4 js-primarynav__item has-sub">
+                    <span
+                      class="flex pb-4 font-bold whitespace-no-wrap cursor-default nav-node text-18"
+                      >News &amp; Events</span
+                    >
+                    <div
+                      class="absolute left-0 hidden w-full py-12 pt-16 bg-white border-t shadow nav-sub"
+                      style="top: 95px"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="flex">
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">News and Resources</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/newsroom"
+                                      >Newsroom</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/alchemist"
+                                      >Alchemist</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/publications"
+                                      >Publications</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/press-page"
+                                      >Press Page</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/prices-and-data/lbma-annual-precious-metals-forecast-survey"
+                                      >LBMA Annual Precious Metals Forecast
+                                      Survey</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/centenary-of-the-lbma-gold-price"
+                                      >Centenary of the LBMA Gold Price</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="pr-4">
+                                <p class="font-bold">Events and Webinars</p>
+                                <ul>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/events"
+                                      >Events</a
+                                    >
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="block py-1 leading-tight nav-node"
+                                      href="https://www.lbma.org.uk/videos"
+                                      >Webinar Series</a
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="flex-1">
+                              <div class="p-6 pb-0 rounded-sm shadow-lg">
+                                <a
+                                  href="/wonders-of-gold"
+                                  class="flex flex-col h-full relative items-start group transform transition-transform duration-200 hover:-translate-y-1 bg-center bg-cover"
+                                >
+                                  <div
+                                    class="flex flex-col justify-between h-full w-full min-h-1"
+                                  >
+                                    <div class="">
+                                      <h3
+                                        class="text-22 font-medium leading-tight text-black mb-4 md:mb-6"
+                                      >
+                                        Wonders of Gold
+                                      </h3>
+                                      <div class="text-18 mb-6 text-black">
+                                        <p>
+                                          An online exhibition of over 100 items
+                                          that tell the story of gold.
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p class="mb-6 button">
+                                      <span
+                                        class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-black hover:bg-black-hover group-hover:bg-black-hover transition-all duration-200"
+                                      >
+                                        Find out more
+                                      </span>
+                                    </p>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul
+                  id="js-secondarynav"
+                  class="flex justify-end select-none text-13"
+                >
+                  <li
+                    class="ml-4 first:ml-0 text-silver-hover group relative arrow-hover"
+                  >
+                    <a
+                      class="uppercase flex font-medium items-center pb-2 arrow-item hover:text-turquoise"
+                      href="https://www.lbma.org.uk/about-us"
+                    >
+                      About Us
+                    </a>
+                    <div
+                      class="absolute top-0 right-0 hidden px-8 py-6 mt-6 font-normal text-black bg-white rounded-sm shadow-lg group-hover:block text-17"
+                    >
+                      <ul class="whitespace-no-wrap">
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/about-us/about-the-lbma"
+                            >About LBMA</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/about-us/our-team"
+                            >Our Team</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/about-us/lbma-board"
+                            >LBMA Board</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/about-us/lbma-sub-committees"
+                            >LBMA Sub-Committees</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/market-standards/origins-of-the-london-bullion-market"
+                            >Origins of the London Bullion Market</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/market-standards/history-of-global-trade-in-bullion"
+                            >History of Global Trade in Bullion</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="ml-4 first:ml-0 text-silver-hover group relative">
+                    <a
+                      class="uppercase flex font-medium items-center pb-2 arrow-item hover:text-turquoise"
+                      href="https://portal.lbmahosting.org.uk"
+                    >
+                      MyLBMA Login
+                    </a>
+                  </li>
+                  <li class="ml-4 first:ml-0 text-silver-hover group relative">
+                    <a
+                      class="uppercase flex font-medium items-center pb-2 arrow-item hover:text-turquoise"
+                      href="https://www.lbma.org.uk/contact"
+                    >
+                      Contact Us
+                    </a>
+                  </li>
+                  <li class="ml-4 first:ml-0 text-silver-hover group relative">
+                    <a
+                      class="uppercase flex font-medium items-center pb-2 arrow-item hover:text-turquoise"
+                      href="/cn/"
+                    >
+                      中文網站
+                    </a>
+                  </li>
+                  <li
+                    class="ml-4 first:ml-0 text-silver-hover group relative arrow-hover"
+                  >
+                    <span
+                      class="uppercase flex font-medium items-center pb-2 arrow-item hover:text-turquoise"
+                    >
+                      Quicklinks
+                      <span class="ml-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon-burger fill-current"
+                          width="14"
+                          height="13"
+                          viewBox="0 0 14 13"
+                          fill="none"
+                        >
+                          <path d="M14 0.485291H0V2.48529H14V0.485291Z"></path>
+                          <path d="M14 5.48529H0V7.48529H14V5.48529Z"></path>
+                          <path d="M14 10.4853H0V12.4853H14V10.4853Z"></path>
+                        </svg>
+                      </span>
+                    </span>
+                    <div
+                      class="absolute top-0 right-0 hidden px-8 py-6 mt-6 font-normal text-black bg-white rounded-sm shadow-lg group-hover:block text-17"
+                    >
+                      <ul class="whitespace-no-wrap">
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/events"
+                            >Events</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/membership/about-membership"
+                            >About Membership</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/prices-and-data/precious-metal-prices"
+                            >LBMA Precious Metal Prices</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/market-standards/global-precious-metals-code"
+                            >Global Precious Metals Code</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/good-delivery/gold-current-list"
+                            >Good Delivery Current List</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/publications/good-delivery-rules"
+                            >Good Delivery Rules</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/responsible-sourcing"
+                            >Responsible Sourcing</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/alchemist"
+                            >Alchemist</a
+                          >
+                        </li>
+                        <li class="mb-2">
+                          <a
+                            class="hover:text-turquoise"
+                            href="https://www.lbma.org.uk/prices-and-data/lbma-trade-data"
+                            >LBMA Trade Data</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li
+                    class="relative ml-2 text-silver-hover group"
+                    x-data="{ searchOpen: false }"
+                  >
+                    <a
+                      href="javascript:;"
+                      class="flex items-center pb-2"
+                      @click.prevent="searchOpen = !searchOpen; if (searchOpen) $nextTick(()=>{$refs.input.focus()});"
+                    >
+                      |
+                      <div
+                        class="ml-2 hover:text-turquoise"
+                        style="width: 15px; height: 15px"
+                      >
+                        <svg
+                          class="icon-magnify fill-current"
+                          viewBox="0 0 23 23"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.641 12.479a1 1 0 00-1.782.907c.87 1.709 2.449 3 4.391 3a1 1 0 100-2c-.98 0-1.974-.659-2.609-1.907z"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M10.177 19.787a9.387 9.387 0 005.836-2.024L20.75 22.5l1.414-1.414-4.72-4.72a9.389 9.389 0 002.16-6.006 9.427 9.427 0 10-9.427 9.427zm0-2a7.427 7.427 0 100-14.854 7.427 7.427 0 000 14.854z"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                    <div
+                      x-show="searchOpen"
+                      class="fixed inset-0 flex flex-col justify-center w-screen h-screen bg-white"
+                      style="display: none"
+                    >
+                      <div class="container">
+                        <div class="row">
+                          <div class="absolute top-0 left-0 right-0">
+                            <div class="container">
+                              <div class="row">
+                                <div class="flex justify-end pt-10">
+                                  <a
+                                    href="javascript:;"
+                                    class="flex items-center pb-2"
+                                    @click.prevent="searchOpen = !searchOpen"
+                                  >
+                                    <div
+                                      class="absolute text-black transform rotate-45"
+                                      style="width: 20px; height: 20px"
+                                    >
+                                      <svg
+                                        class="icon-plus fill-current"
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M11 9V0H9v9H0v2h9v9h2v-9h9V9h-9z"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <form action="/search" class="flex">
+                            <input
+                              x-ref="input"
+                              class="text-50 flex-1 py-4 px-8 rounded-l border border-r-0 border-turquoise outline-none"
+                              type="search"
+                              name="q"
+                              placeholder="Search the LBMA"
+                            />
+                            <button
+                              class="bg-white pr-6 text-turquoise rounded-r border border-l-0 border-turquoise"
+                            >
+                              <div style="width: 50px; height: 50px">
+                                <svg
+                                  class="icon-magnify fill-current"
+                                  viewBox="0 0 23 23"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M6.641 12.479a1 1 0 00-1.782.907c.87 1.709 2.449 3 4.391 3a1 1 0 100-2c-.98 0-1.974-.659-2.609-1.907z"
+                                  />
+                                  <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M10.177 19.787a9.387 9.387 0 005.836-2.024L20.75 22.5l1.414-1.414-4.72-4.72a9.389 9.389 0 002.16-6.006 9.427 9.427 0 10-9.427 9.427zm0-2a7.427 7.427 0 100-14.854 7.427 7.427 0 000 14.854z"
+                                  />
+                                </svg>
+                              </div>
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <!-- mobile menu button -->
+            <button
+              id="nav-mobile-toggle"
+              class="relative z-30 p-2 text-gray-900 fnav:hidden hover:bg-white focus:outline-none"
+              aria-label="Main menu"
+              aria-expanded="false"
+              @click="navOpen = !navOpen"
+              :class="{ 'bg-white' : navOpen }"
+            >
+              <svg
+                class="w-8 h-8"
+                :class="{ 'hidden' : navOpen }"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+              <svg
+                class="hidden w-8 h-8"
+                :class="{ 'hidden' : !navOpen }"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+            <!-- mobile menu-->
+            <div
+              id="nav-mobile"
+              class="fixed inset-0 flex flex-col hidden w-screen h-screen pt-24 pb-16 overflow-scroll bg-white fnav:hidden"
+              :class="{ 'block' : navOpen , 'hidden' : !navOpen }"
+            >
+              <div class="container">
+                <div class="row">
+                  <ul>
+                    <li class="font-bold text-18" x-data="{ isOpen: false }">
+                      <a
+                        class="flex items-center justify-between py-2"
+                        @click.prevent=" isOpen = !isOpen"
+                        href="#"
+                      >
+                        Market Standards
+                        <span
+                          class="ml-2 transform"
+                          :class="{ 'rotate-180' : isOpen }"
+                        >
+                          <svg
+                            class="icon-downarrow fill-current"
+                            <svg
+                            width="15"
+                            height="9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.414 0l6 6 6-6 1.414 1.414-7.414 7.414L0 1.414 1.414 0z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                      <div x-show="isOpen" class="flex flex-col">
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Overview
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a href="https://www.lbma.org.uk/market-standards"
+                                >Market Standards</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/market-standards/about-loco-london"
+                                >About Loco London</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/market-standards/global-precious-metals-code"
+                                >Global Precious Metals Code</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/publications/the-otc-guide"
+                                >A Guide to the Loco London Precious Metals
+                                Market</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/training-and-education"
+                                >Training and Education</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Regulation
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/regulation/financial-regulation"
+                                >Financial Regulation</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/regulation/due-diligence-regulation"
+                                >Due Diligence Regulation</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/regulation/environmental-regulation"
+                                >Environmental Regulation</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/market-standards/incident-review-process"
+                                >Incident Review Process</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="font-bold text-18" x-data="{ isOpen: false }">
+                      <a
+                        class="flex items-center justify-between py-2"
+                        @click.prevent=" isOpen = !isOpen"
+                        href="#"
+                      >
+                        Membership
+                        <span
+                          class="ml-2 transform"
+                          :class="{ 'rotate-180' : isOpen }"
+                        >
+                          <svg
+                            class="icon-downarrow fill-current"
+                            <svg
+                            width="15"
+                            height="9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.414 0l6 6 6-6 1.414 1.414-7.414 7.414L0 1.414 1.414 0z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                      <div x-show="isOpen" class="flex flex-col">
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Overview
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/membership/about-membership"
+                                >About Membership</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/membership/membership-benefits"
+                                >Membership Benefits</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/membership/how-to-join"
+                                >How to Join</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/membership/current-membership"
+                                >Current Members</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="font-normal text-19">
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/membership/rules-for-members"
+                                >Rules for Members</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/membership/lbma-subscriber"
+                                >LBMA Subscriber</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a href="https://www.lbma.org.uk/membership/faqs"
+                                >Membership FAQs</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="font-bold text-18" x-data="{ isOpen: false }">
+                      <a
+                        class="flex items-center justify-between py-2"
+                        @click.prevent=" isOpen = !isOpen"
+                        href="#"
+                      >
+                        Good Delivery
+                        <span
+                          class="ml-2 transform"
+                          :class="{ 'rotate-180' : isOpen }"
+                        >
+                          <svg
+                            class="icon-downarrow fill-current"
+                            <svg
+                            width="15"
+                            height="9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.414 0l6 6 6-6 1.414 1.414-7.414 7.414L0 1.414 1.414 0z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                      <div x-show="isOpen" class="flex flex-col">
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Overview
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/about-good-delivery"
+                                >About Good Delivery</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/good-delivery-rules-and-governance"
+                                >Good Delivery Rules and Governance</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/reference-materials"
+                                >Reference Materials</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/proactive-monitoring"
+                                >Proactive Monitoring</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/proficiency-testing-scheme"
+                                >Proficiency Testing Scheme</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="font-normal text-19">
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/vault-operators-training"
+                                >Vault Operators Training</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/gold-bar-security-feature"
+                                >Gold Bar Security Feature</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/visual-guide"
+                                >Visual Guide</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/non-destructive-testing-guidelines"
+                                >Non-Destructive Testing Guidelines</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/faqs"
+                                >Good Delivery FAQs</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Lists
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/gold-current-list"
+                                >Good Delivery Current List</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/gold-former-list"
+                                >Good Delivery Former List</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/good-delivery/how-to-apply-for-good-delivery-accreditation"
+                                >How to apply for Good Delivery accreditation</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="font-bold text-18" x-data="{ isOpen: false }">
+                      <a
+                        class="flex items-center justify-between py-2"
+                        @click.prevent=" isOpen = !isOpen"
+                        href="#"
+                      >
+                        Responsible Sourcing
+                        <span
+                          class="ml-2 transform"
+                          :class="{ 'rotate-180' : isOpen }"
+                        >
+                          <svg
+                            class="icon-downarrow fill-current"
+                            <svg
+                            width="15"
+                            height="9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.414 0l6 6 6-6 1.414 1.414-7.414 7.414L0 1.414 1.414 0z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                      <div x-show="isOpen" class="flex flex-col">
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Overview
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/responsible-sourcing"
+                                >Responsible Sourcing</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/responsible-sourcing/auditors"
+                                >Auditors</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/responsible-sourcing/guidance-documents"
+                                >Guidance Documents</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/responsible-sourcing/refiners-toolkit"
+                                >Refiners Toolkit</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Resources
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/articles/international-bullion-centres-recommendations"
+                                >International Bullion Centre Recommendations</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/videos/responsible-sourcing-introductory-training-module"
+                                >Introductory Training Module</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/responsible-sourcing/responsible-sourcing-faqs"
+                                >Responsible Sourcing FAQs</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="font-bold text-18" x-data="{ isOpen: false }">
+                      <a
+                        class="flex items-center justify-between py-2"
+                        @click.prevent=" isOpen = !isOpen"
+                        href="#"
+                      >
+                        Prices &amp; Data
+                        <span
+                          class="ml-2 transform"
+                          :class="{ 'rotate-180' : isOpen }"
+                        >
+                          <svg
+                            class="icon-downarrow fill-current"
+                            <svg
+                            width="15"
+                            height="9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.414 0l6 6 6-6 1.414 1.414-7.414 7.414L0 1.414 1.414 0z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                      <div x-show="isOpen" class="flex flex-col">
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Overview
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/about-lbma-precious-metal-prices"
+                                >About LBMA Precious Metal Prices</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/lbma-gold-price"
+                                >LBMA Gold Price</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/lbma-silver-price"
+                                >LBMA Silver Price</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/lbma-platinum-and-palladium-price"
+                                >LBMA Platinum and Palladium Price</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/market-standards/clearing"
+                                >Clearing</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/market-standards/vault-storage"
+                                >Vault Storage</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">Data</p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/precious-metal-prices"
+                                >LBMA Precious Metal Prices</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/clearing-data"
+                                >Clearing Data</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/london-vault-holdings-data"
+                                >London Vault Holdings data</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/lbma-trade-data"
+                                >LBMA Trade Data</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/value-dates"
+                                >Value Dates</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="font-bold text-18" x-data="{ isOpen: false }">
+                      <a
+                        class="flex items-center justify-between py-2"
+                        @click.prevent=" isOpen = !isOpen"
+                        href="#"
+                      >
+                        News &amp; Events
+                        <span
+                          class="ml-2 transform"
+                          :class="{ 'rotate-180' : isOpen }"
+                        >
+                          <svg
+                            class="icon-downarrow fill-current"
+                            <svg
+                            width="15"
+                            height="9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.414 0l6 6 6-6 1.414 1.414-7.414 7.414L0 1.414 1.414 0z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                      <div x-show="isOpen" class="flex flex-col">
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            News and Resources
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a href="https://www.lbma.org.uk/newsroom"
+                                >Newsroom</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a href="https://www.lbma.org.uk/alchemist"
+                                >Alchemist</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a href="https://www.lbma.org.uk/publications"
+                                >Publications</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a href="https://www.lbma.org.uk/press-page"
+                                >Press Page</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/prices-and-data/lbma-annual-precious-metals-forecast-survey"
+                                >LBMA Annual Precious Metals Forecast Survey</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a
+                                href="https://www.lbma.org.uk/centenary-of-the-lbma-gold-price"
+                                >Centenary of the LBMA Gold Price</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="font-normal text-19">
+                          <p class="mb-4 uppercase text-12 text-silver">
+                            Events and Webinars
+                          </p>
+                          <ul class="mb-4">
+                            <li class="mb-2">
+                              <a href="https://www.lbma.org.uk/events"
+                                >Events</a
+                              >
+                            </li>
+                            <li class="mb-2">
+                              <a href="https://www.lbma.org.uk/videos"
+                                >Webinar Series</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="mb-6 uppercase text-silver text-14">
+                    <li x-data="{ isOpen: false }">
+                      <a
+                        class="flex justify-between py-2"
+                        @click.prevent=" isOpen = !isOpen"
+                        href="#"
+                      >
+                        About Us
+                        <span
+                          class="ml-2 transform"
+                          :class="{ 'rotate-180' : isOpen }"
+                        >
+                          <svg
+                            class="icon-downarrow fill-current"
+                            <svg
+                            width="15"
+                            height="9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.414 0l6 6 6-6 1.414 1.414-7.414 7.414L0 1.414 1.414 0z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                      <div x-show="isOpen" class="flex flex-col">
+                        <ul>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/about-us/about-the-lbma"
+                              >About LBMA</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/about-us/our-team"
+                              >Our Team</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/about-us/lbma-board"
+                              >LBMA Board</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/about-us/lbma-sub-committees"
+                              >LBMA Sub-Committees</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/market-standards/origins-of-the-london-bullion-market"
+                              >Origins of the London Bullion Market</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/market-standards/history-of-global-trade-in-bullion"
+                              >History of Global Trade in Bullion</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        class="flex py-2"
+                        href="https://portal.lbmahosting.org.uk"
+                        >MyLBMA Login</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="flex py-2"
+                        href="https://www.lbma.org.uk/contact"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li>
+                      <a class="flex py-2" href="/cn/">中文網站</a>
+                    </li>
+                    <li x-data="{ isOpen: false }">
+                      <a
+                        class="flex justify-between py-2"
+                        @click.prevent=" isOpen = !isOpen"
+                        href="#"
+                      >
+                        Quicklinks
+                        <span
+                          class="ml-2 transform"
+                          :class="{ 'rotate-180' : isOpen }"
+                        >
+                          <svg
+                            class="icon-downarrow fill-current"
+                            <svg
+                            width="15"
+                            height="9"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.414 0l6 6 6-6 1.414 1.414-7.414 7.414L0 1.414 1.414 0z"
+                            />
+                          </svg>
+                        </span>
+                      </a>
+                      <div x-show="isOpen" class="flex flex-col">
+                        <ul>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/events"
+                              >Events</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/membership/about-membership"
+                              >About Membership</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/prices-and-data/precious-metal-prices"
+                              >LBMA Precious Metal Prices</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/market-standards/global-precious-metals-code"
+                              >Global Precious Metals Code</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/good-delivery/gold-current-list"
+                              >Good Delivery Current List</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/publications/good-delivery-rules"
+                              >Good Delivery Rules</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/responsible-sourcing"
+                              >Responsible Sourcing</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/alchemist"
+                              >Alchemist</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="flex py-2"
+                              href="https://www.lbma.org.uk/prices-and-data/lbma-trade-data"
+                              >LBMA Trade Data</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                  <form action="/search" class="flex shadow">
+                    <input
+                      class="text-18 flex-1 p-4 rounded-sm border border-r-0 border-turquoise outline-none"
+                      type="search"
+                      name="q"
+                      placeholder="Search the LBMA"
+                    />
+                    <button
+                      class="bg-white pr-6 text-turquoise rounded-r-sm border border-l-0 border-turquoise"
+                    >
+                      <div style="width: 20px; height: 20px">
+                        <svg
+                          class="icon-magnify fill-current"
+                          viewBox="0 0 23 23"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6.641 12.479a1 1 0 00-1.782.907c.87 1.709 2.449 3 4.391 3a1 1 0 100-2c-.98 0-1.974-.659-2.609-1.907z"
+                          />
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M10.177 19.787a9.387 9.387 0 005.836-2.024L20.75 22.5l1.414-1.414-4.72-4.72a9.389 9.389 0 002.16-6.006 9.427 9.427 0 10-9.427 9.427zm0-2a7.427 7.427 0 100-14.854 7.427 7.427 0 000 14.854z"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      class="relative overflow-x-hidden"
+      data-barba="container"
+      data-barba-namespace="alchemist"
+    >
+      <main
+        id="main"
+        role="main"
+        class="relative"
+        data-pri="turquoise"
+        data-pri-hex="#18B5BB"
+        data-sec="blue"
+      >
+        <div class="mb-8">
+          <div class="container bg-blue">
+            <div class="row">
+              <div class="pt-header bg-blue">
+                <div class="pt-20 pb-8 text-white">
+                  <p class="text-14 md:text-18 text-turquoise font-semibold">
+                    Prices and Data
+                  </p>
+                  <h1 class="mb-4 leading-none text-40 lg:text-60">
+                    LBMA <strong>Precious Metal Prices</strong>
+                  </h1>
+                  <div class="max-w-4xl leading-tight text-24 md:text-28">
+                    <p>
+                      International prices for gold, silver, platinum and
+                      palladium.<u
+                        ><a
+                          href="https://www.lppm.com/data/#c=pd&amp;y=2021&amp;t=daily"
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        ></a
+                      ></u>
+                    </p>
+                  </div>
+                  <div class="pt-8">
+                    <link
+                      href="https://prices.lbma.org.uk/precious-metal-prices/css/chunk-vendors.css"
+                      rel="stylesheet"
+                    />
+                    <link
+                      href="https://prices.lbma.org.uk/precious-metal-prices/css/app.css"
+                      rel="stylesheet"
+                    />
+                    <script>
+                      window.darkMode = true;
+                      window.pricesDomain = "https://prices.lbma.org.uk/";
+                    </script>
+                    <div id="pricesapp"></div>
+                    <script src="https://prices.lbma.org.uk/precious-metal-prices/js/chunk-vendors.js"></script>
+                    <script src="https://prices.lbma.org.uk/precious-metal-prices/js/app.js"></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<p class="pepper">layout/blocks/body/_related</p>-->
+        <div class="container py-8 md:pt-20 fade-in">
+          <div class="row">
+            <div class="md:flex md:flex-wrap md:-mx-6">
+              <div class="mb-10 md:w-1/2 md:px-6">
+                <a
+                  href="https://www.lbma.org.uk/prices-and-data/about-lbma-precious-metal-prices"
+                  class="flex flex-col h-full relative items-start group transform transition-transform duration-200 hover:-translate-y-1 bg-center bg-cover"
+                >
+                  <div
+                    class="flex flex-col justify-between h-full w-full max-w-lg min-h-1"
+                  >
+                    <div class="">
+                      <h3
+                        class="text-28 md:text-34 font-medium leading-tight text-black mb-4 md:mb-6"
+                      >
+                        About LBMA Precious Metal Prices
+                      </h3>
+                      <div class="text-18 md:text-21 mb-6 text-black">
+                        <p>
+                          When are the prices set? Who administers them? We’ve
+                          summarised below the main features of each of our
+                          precious metal prices.
+                        </p>
+                      </div>
+                    </div>
+                    <p class="mb-6 button">
+                      <span
+                        class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-turquoise hover:bg-turquoise-hover group-hover:bg-turquoise-hover transition-all duration-200"
+                      >
+                        Find out more
+                      </span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="mb-10 md:w-1/2 md:px-6">
+                <a
+                  href="https://www.lbma.org.uk/prices-and-data/lbma-trade-data"
+                  class="flex flex-col h-full relative items-start group transform transition-transform duration-200 hover:-translate-y-1 bg-center bg-cover"
+                >
+                  <div
+                    class="flex flex-col justify-between h-full w-full max-w-lg min-h-1"
+                  >
+                    <div class="">
+                      <h3
+                        class="text-28 md:text-34 font-medium leading-tight text-black mb-4 md:mb-6"
+                      >
+                        LBMA Trade Data
+                      </h3>
+                      <div class="text-18 md:text-21 mb-6 text-black">
+                        <p>
+                          For the first time in history, LBMA Trade Data makes
+                          it possible for market participants to gauge the size
+                          and shape of the London OTC precious metals market,
+                          the oldest and biggest financial market for gold in
+                          the world.
+                        </p>
+                      </div>
+                    </div>
+                    <p class="mb-6 button">
+                      <span
+                        class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-turquoise hover:bg-turquoise-hover group-hover:bg-turquoise-hover transition-all duration-200"
+                      >
+                        Find out more
+                      </span>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer
+        id="footer"
+        role="contentinfo"
+        class="relative text-white bg-black"
+      >
+        <div class="container pt-40 pb-16">
+          <div class="row">
+            <div class="absolute footer__logo top-0 text-turquoise">
+              <svg
+                class="icon-logo fill-current"
+                viewBox="0 0 79 123"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path class="icon-logo-bg" d="M79 0H0v122.953h79V0z" />
+                <path
+                  d="M54.837 56.024a40.27 40.27 0 00-6.751-22.386 23.096 23.096 0 01-.119 44.89 39.796 39.796 0 006.87-22.504zM16.112 96.172h1.895v13.858h6.04l-.237 1.54h-7.698V96.173zM29.847 97.712h1.659a2.369 2.369 0 011.776 2.487 4.264 4.264 0 01-.237 1.185c-.474.947-1.066 1.303-2.724 1.303h-2.724v-4.975h2.25zM25.82 111.57h4.027c2.25 0 2.724 0 3.553-.356a4.14 4.14 0 002.606-3.908 4.26 4.26 0 00-1.421-3.08 4.63 4.63 0 00-2.014-.829 3.55 3.55 0 002.725-3.434 3.672 3.672 0 00-2.606-3.435c-.83-.356-1.54-.356-4.62-.356h-2.25v15.398zm4.501-7.225h1.895a2.604 2.604 0 011.777 2.724c.034.447-.047.896-.237 1.303-.474 1.184-1.185 1.54-3.08 1.54h-3.08v-5.567h2.725zM39.445 96.172h2.605l2.843 10.068.592 2.724c.145-.88.343-1.75.592-2.606l2.843-10.186h2.724l1.421 15.398H51.17l-.947-11.252c0-1.066-.119-2.724-.119-2.724-.113.847-.312 1.68-.592 2.487l-3.316 11.489h-1.54l-3.08-10.897c-.236-1.184-.473-2.013-.71-3.08-.237-1.065-.118 2.014-.237 2.962L39.8 111.57h-1.777l1.422-15.397zM59.694 100.081l.829-2.25.71 2.368c.356 1.303 1.659 5.093 1.659 5.093h-4.857s1.54-4.974 1.659-5.211zm-.356-3.909l-5.093 15.398h1.895l1.422-4.738h5.803l1.422 4.738h2.131l-5.092-15.397h-2.488zM46.07 33.755l1.777 4.264A19.308 19.308 0 0022.164 52.89a19.306 19.306 0 0019.288 22.556 20.729 20.729 0 006.04-.947l-1.54 3.79-4.382 10.778-4.5-10.778-8.173 8.29V74.855l-10.66 4.5 4.383-10.659H11.012l8.291-8.172-10.778-4.501 10.778-4.382-8.29-8.173H22.62L18.237 32.69l10.66 4.5V25.584l8.172 8.172 4.501-10.66 4.5 10.66z"
+                  fill="#fff"
+                />
+              </svg>
+            </div>
+            <div class="mb-16 lg:flex">
+              <div class="mb-16 lg:mb-0 lg:w-4/12">
+                <h3 class="mb-3 font-semibold text-white text-20">
+                  Stay updated
+                </h3>
+                <p class="mb-4">
+                  Register to access the latest LBMA news and events through our
+                  email alerts
+                </p>
+                <a
+                  class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-turquoise hover:bg-turquoise-hover group-hover:bg-turquoise-hover transition-all duration-200"
+                  href="https://portal.lbmahosting.org.uk/My-LBMA/My-Account/My-Subscriptions"
+                >
+                  Register at MyLBMA
+                </a>
+              </div>
+              <div
+                class="flex mb-6 text-white uppercase text-14 lg:w-6/12 lg:ml-auto"
+              >
+                <div class="w-1/2 mb-6 md:mb-0">
+                  <h3 class="mb-2 font-bold text-14">The LBMA</h3>
+                  <div class="uppercase">
+                    <ul>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/about-us"
+                          >About Us</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/membership"
+                          >Membership</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/membership/current-membership"
+                          >Current Members</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/contact"
+                          >Contact Us</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/about-us/our-team"
+                          >Our Team</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/newsroom"
+                          >Newsroom</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://portal.lbmahosting.org.uk/"
+                          >MyLBMA</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="w-1/2 mb-6 md:mb-0">
+                  <h3 class="mb-2 font-bold text-14">Quicklinks</h3>
+                  <div class="uppercase">
+                    <ul>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/prices-and-data"
+                          >Prices and Data</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/prices-and-data/lbma-trade-data"
+                          >LBMA Trade Data</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/good-delivery"
+                          >Good Delivery</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/alchemist"
+                          >Alchemist</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/events"
+                          >Events</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/responsible-sourcing"
+                          >Responsible Sourcing</a
+                        >
+                      </li>
+                      <li class="mb-2">
+                        <a
+                          class="hover:underline"
+                          href="https://www.lbma.org.uk/publications/the-otc-guide"
+                          >A Guide to the Loco London Precious Metals Market</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center text-white uppercase lg:w-1/12">
+                <div class="mb-6">
+                  <a
+                    class="cursor-pointer select-none rounded-sm px-4 py-2 uppercase shadow-md inline-flex font-medium text-13 text-white bg-turquoise hover:bg-turquoise-hover group-hover:bg-turquoise-hover transition-all duration-200"
+                    href="/cn"
+                  >
+                    中文網站
+                  </a>
+                </div>
+                <div class="mx-auto" style="max-width: 150px">
+                  <img
+                    src="https://cdn.lbma.org.uk/downloads/qr-code.png"
+                    alt="QR code"
+                    class="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="items-center justify-center md:flex md:justify-between text-14"
+            >
+              <p class="mb-8 md:mb-0">
+                <strong>&copy; 2022 LBMA</strong>
+                7th Floor, 62 Threadneedle Street, London EC2R 8HP |
+                <a href="/lbma-privacy-notice" class="hover:underline"
+                  >LBMA Privacy Notice</a
+                >
+              </p>
+              <div class="flex justify-center">
+                <a
+                  aria-label="Twitter"
+                  href="https://twitter.com/lbmaexecutive"
+                  class="twitter p-3 flex items-center rounded-sm mr-2 bg-turquoise hover:bg-blue"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="27"
+                    height="25"
+                    viewBox="0 0 27 25"
+                    fill="none"
+                  >
+                    <path
+                      d="M26 4.34234C25.0876 4.7027 24.0839 4.97297 23.0803 5.15315C24.1752 4.52252 24.9051 3.53153 25.3613 2.36036C24.3577 2.9009 23.2628 3.35135 22.0766 3.62162C21.1642 2.63063 19.7956 2 18.3358 2C15.5073 2 13.2263 4.25225 13.2263 7.04504C13.2263 7.4054 13.2263 7.85586 13.3175 8.21622C9.12044 8.03604 5.37956 5.96396 2.82482 2.9009C2.36861 3.71171 2.09489 4.52252 2.09489 5.42342C2.09489 7.13513 3.0073 8.75676 4.37591 9.65766C3.55474 9.65766 2.73358 9.38739 2.09489 9.02703C2.09489 9.02703 2.09489 9.02703 2.09489 9.11712C2.09489 11.5495 3.82847 13.6216 6.20073 14.0721C5.74453 14.1622 5.28832 14.2523 4.83212 14.2523C4.46715 14.2523 4.19343 14.2523 3.82847 14.1622C4.46715 16.1441 6.38321 17.5856 8.57299 17.6757C6.83942 19.027 4.64964 19.8378 2.18613 19.8378C1.72993 19.8378 1.36496 19.8378 1 19.7477C3.28102 21.1892 5.92701 22 8.84672 22C18.2445 22 23.4453 14.3423 23.4453 7.58559C23.4453 7.4054 23.4453 7.13513 23.4453 6.95495C24.4489 6.23423 25.3613 5.42342 26 4.34234Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  aria-label="YouTube"
+                  href="https://www.youtube.com/c/LondonBullionMarketAssociation"
+                  class="youtube p-3 flex items-center rounded-sm mr-2 bg-turquoise hover:bg-blue"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="27"
+                    height="25"
+                    viewBox="0 0 27 25"
+                    fill="none"
+                  >
+                    <path
+                      d="M26.737 7.15941C26.737 7.15941 26.474 5.30095 25.6851 4.41597C24.6331 3.35399 23.4935 3.35399 22.9675 3.26549C19.1981 3 13.5 3 13.5 3C13.5 3 7.80195 3 4.03247 3.26549C3.50649 3.35399 2.36688 3.35399 1.31494 4.41597C0.525974 5.30095 0.262987 7.15941 0.262987 7.15941C0.262987 7.15941 0 9.37186 0 11.5843V13.6198C0 15.8322 0.262987 18.0447 0.262987 18.0447C0.262987 18.0447 0.525974 19.9031 1.31494 20.7881C2.36688 21.8501 3.68182 21.8501 4.29545 21.9386C6.48701 22.1156 13.5 22.2041 13.5 22.2041C13.5 22.2041 19.1981 22.2041 22.9675 21.9386C23.4935 21.8501 24.6331 21.8501 25.6851 20.7881C26.474 19.9916 26.737 18.0447 26.737 18.0447C26.737 18.0447 27 15.8322 27 13.6198V11.5843C27 9.37186 26.737 7.15941 26.737 7.15941ZM10.6948 16.0977V8.39838L17.9708 12.2038L10.6948 16.0977Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  aria-label="LinkedIn"
+                  href="https://www.linkedin.com/company/london-bullion-market-association"
+                  class="linkedin p-3 flex items-center rounded-sm bg-turquoise hover:bg-blue"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="27"
+                    height="25"
+                    viewBox="0 0 27 25"
+                    fill="none"
+                  >
+                    <path
+                      d="M24.1092 0H2.89076C1.84034 0 1 0.840336 1 1.78571V23.2143C1 24.1597 1.84034 25 2.89076 25H24.1092C25.1597 25 26 24.1597 26 23.2143V1.78571C26 0.840336 25.1597 0 24.1092 0ZM8.45798 21.3235H4.67647V9.34874H8.35294V21.3235H8.45798ZM6.56723 7.77311C5.41176 7.77311 4.46639 6.82773 4.46639 5.67227C4.46639 4.51681 5.41176 3.57143 6.56723 3.57143C7.72269 3.57143 8.66807 4.51681 8.66807 5.67227C8.66807 6.82773 7.72269 7.77311 6.56723 7.77311ZM22.3235 21.3235H18.6471V15.5462C18.6471 14.1807 18.6471 12.395 16.7563 12.395C14.8655 12.395 14.5504 13.8655 14.5504 15.4412V21.3235H10.7689V9.34874H14.3403V11.0294C14.8655 10.084 16.021 9.13866 17.8067 9.13866C21.5882 9.13866 22.2185 11.6597 22.2185 14.8109V21.3235H22.3235Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div
+      class="fixed inset-0 z-10 hidden w-screen h-screen bg-black overlay"
+    ></div>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign%2CNodeList.prototype.forEach%2CElement.prototype.classList"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.min.js"
+      integrity="sha512-uzOpZ74myvXTYZ+mXUsPhDF+/iL/n32GDxdryI2SJronkEyKC8FBFRLiBQ7l7U/PTYebDbgTtbqTa6/vGtU23A=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/app.min.js"></script>
+    <script src="/assets/js/ext/banner.min.js"></script>
+    <script>
+      var bannerConfig = {
+        content: {
+          message:
+            "This site uses cookies to store information on your computer.",
+          linkText: "Read our cookie policy",
+          linkAddress: "/lbma-privacy-notice",
+          buttonText: "I&#039;m fine with this",
+        },
+        styling: {
+          backgroundColor: "turquoise",
+          messageTextColor: "white",
+          linkColor: "white",
+          buttonColor: "white",
+          buttonTextColor: "turquoise",
+        },
+      };
+      Banner.create(bannerConfig);
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "author": { "@id": "#identity" },
+            "copyrightHolder": { "@id": "#identity" },
+            "copyrightYear": "2020",
+            "creator": { "@id": "#creator" },
+            "dateModified": "2021-09-13T17:42:43+01:00",
+            "datePublished": "2020-08-20T18:19:00+01:00",
+            "description": "International prices for gold, silver, platinum and palladium.",
+            "headline": "LBMA Precious Metal Prices",
+            "inLanguage": "en-gb",
+            "mainEntityOfPage": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices",
+            "name": "LBMA Precious Metal Prices",
+            "publisher": { "@id": "#creator" },
+            "url": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices"
+          },
+          { "@id": "#identity", "@type": "WebPage", "inLanguage": "en-gb" },
+          { "@id": "#creator", "@type": "WebPage", "inLanguage": "en-gb" },
+          {
+            "@type": "BreadcrumbList",
+            "description": "Breadcrumbs list",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "item": "https://www.lbma.org.uk",
+                "name": "Home",
+                "position": 1
+              },
+              {
+                "@type": "ListItem",
+                "item": "https://www.lbma.org.uk/prices-and-data",
+                "name": "Prices and Data",
+                "position": 2
+              },
+              {
+                "@type": "ListItem",
+                "item": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices",
+                "name": "LBMA Precious Metal Prices",
+                "position": 3
+              }
+            ],
+            "name": "Breadcrumbs"
+          }
+        ]
+      }
+    </script>
+  </body>
+</html>
+<!-- Cached by Blitz on 2022-03-07T18:00:03+00:00 --><!-- Served by Blitz on 2022-03-25T16:30:42+00:00 -->
